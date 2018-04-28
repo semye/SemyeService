@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cms.semye.dao.UserDao">
+
+    <insert id="insertUser" parameterType="com.cms.semye.bean.User">
+
+        INSERT INTO SEMYE_USER (username, mobilephone) VALUES (#{username}, #{mobilephone})
+    </insert>
+
+    <select id="getCharactersList" resultType="com.cms.semye.bean.Characters">
+        SELECT *
+        FROM SEMYE_CHARACTERS;
+    </select>
+
+
+    <!--登录时查询数据库-->
+    <select id="queryUser" parameterType="com.cms.semye.bean.User" resultType="com.cms.semye.bean.User">
+        SELECT *
+        FROM SEMYE_USER
+        WHERE USERNAME = #{username} AND PASSWORD = #{password}
+    </select>
+</mapper>

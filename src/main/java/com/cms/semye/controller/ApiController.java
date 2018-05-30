@@ -32,23 +32,7 @@ public class ApiController {
     public
     @ResponseBody
     Response<List<Characters>> getCharactersList() {
-        Response<List<Characters>> repResponse = new Response<List<Characters>>();
-        try {
-            List<Characters> characters = userService.getCharactersList();
-            if (characters != null) {
-                repResponse.setCode(0);
-                repResponse.setMessage("获取数据成功");
-                repResponse.setData(characters);
-            } else {
-                repResponse.setCode(0);
-                repResponse.setMessage("获取数据失败");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            repResponse.setCode(-1);
-            repResponse.setMessage("查询数据库失败");
-        }
-        return repResponse;
+        return userService.getCharactersList();
     }
 
 }

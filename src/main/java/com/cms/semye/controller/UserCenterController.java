@@ -11,7 +11,7 @@ import java.io.UnsupportedEncodingException;
  * Created by semye on 2017/11/26.
  */
 @Controller
-public class UsercenterController {
+public class UserCenterController {
 
 
     /**

@@ -1,6 +1,7 @@
 package com.cms.semye.service;
 
 import com.cms.semye.bean.Characters;
+import com.cms.semye.bean.Response;
 
 import java.util.List;
 
@@ -15,6 +16,6 @@ public interface CharactersService {
      *
      * @return 英雄联盟列表
      */
-    List<Characters> getCharactersList();
+    Response<List<Characters>> getCharactersList();
 
 }

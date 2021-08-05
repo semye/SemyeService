@@ -1,4 +1,4 @@
-package com.cms.semye.serviceimpl;
+package com.cms.semye.service;
 
 import com.cms.semye.bean.Characters;
 import com.cms.semye.bean.Response;
@@ -14,7 +14,7 @@ import java.util.List;
  * Created by semye on 2018/4/28.
  */
 @Service("charactersService")
-public class CharactersServceImpl implements CharactersService {
+public class CharactersServiceImpl implements CharactersService {
 
 
     @Autowired

@@ -29,9 +29,8 @@ public class ApiController {
      * @return 获取英雄列表
      */
     @RequestMapping(value = "/getCharactersList", method = {RequestMethod.GET})
-    public
     @ResponseBody
-    Response<List<Characters>> getCharactersList() {
+    public Response<List<Characters>> getCharactersList() {
         return userService.getCharactersList();
     }
 
